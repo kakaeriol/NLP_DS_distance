@@ -2,7 +2,6 @@
 from typing import List, Union, Any
 import os
 import numpy as np
-import torch
 import re
 import pandas as pd
 class Daily_Dialog_preprocessing:
@@ -213,7 +212,8 @@ class IEMOCAP_preprocessing:
         train = get_data(train_video)
         test = get_data(testVid)
         valid = get_data(valid_video)
-        out_rs = {'train': train, 'dev': valid, 'test': test, 'train_idx': train_video, 'dev_idx':valid_video, 'test_idx':test, 'mapping_emo': self.map_emo_label}
+        out_rs = {'train': train, 'dev': valid, 'test': test, 'train_idx': train_video,
+                  'dev_idx':valid_video, 'test_idx':test, 'mapping_emo': self.map_emo_label}
         
         return out_rs
     
